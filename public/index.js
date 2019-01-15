@@ -35,7 +35,7 @@ const events = [{
   'options': {
     'deductibleReduction': false
   },
-  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
+  'price': bars.barId.pricePerHour*time+bars.barId.pricePerPerson*persons,
   'commission': {
     'insurance': 0,
     'treasury': 0,
@@ -50,7 +50,7 @@ const events = [{
   'options': {
     'deductibleReduction': true
   },
-  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
+  'price': 0,
   'commission': {
     'insurance': 0,
     'treasury': 0,
@@ -65,7 +65,7 @@ const events = [{
   'options': {
     'deductibleReduction': true
   },
-  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
+  'price': 0,
   'commission': {
     'insurance': 0,
     'treasury': 0,
