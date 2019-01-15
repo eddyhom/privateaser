@@ -35,7 +35,7 @@ const events = [{
   'options': {
     'deductibleReduction': false
   },
-  'price': step1(barId, time, persons),
+  'price': 0,
   'commission': {
     'insurance': 0,
     'treasury': 0,
