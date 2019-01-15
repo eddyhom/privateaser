@@ -1,6 +1,6 @@
 'use strict';
 
-//list of bats
+//list of bars
 //useful for ALL 5 steps
 //could be an array of objects that you fetched from api or database
 const bars = [{
@@ -35,7 +35,7 @@ const events = [{
   'options': {
     'deductibleReduction': false
   },
-  'price': 0,
+  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
   'commission': {
     'insurance': 0,
     'treasury': 0,
@@ -50,7 +50,7 @@ const events = [{
   'options': {
     'deductibleReduction': true
   },
-  'price': 0,
+  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
   'commission': {
     'insurance': 0,
     'treasury': 0,
@@ -65,7 +65,7 @@ const events = [{
   'options': {
     'deductibleReduction': true
   },
-  'price': 0,
+  'price': barId.pricePerHour*time+barId.pricePerPerson*persons,
   'commission': {
     'insurance': 0,
     'treasury': 0,
