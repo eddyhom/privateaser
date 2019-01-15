@@ -146,14 +146,17 @@ const actors = [{
   }]
 }];
 
-function step1(barId, time, persons) {
-    for(var i = 0; i < bars.length; i++) {
-        if(bars[i].id == barId)
-        {
-            return bars[i].pricePerHour*time+bars[i].pricePerPerson*persons;
-        }
-    }       // Function returns the product of a and b
-}
+
+for(var i = 0; i < events.length; i++) {
+    for(var j = 0; j < bars.length; j++){
+        if(bars[j].id == events[i].barId)
+            {
+                events[i].price = bars[j].pricePerHour * events[i].time + bars[j].pricePerPerson * events[i].persons;
+                break;
+            }
+    }
+}       // Function returns the product of a and b
+
 
 
 console.log(bars);
