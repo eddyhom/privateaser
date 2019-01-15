@@ -35,7 +35,7 @@ const events = [{
   'options': {
     'deductibleReduction': false
   },
-  'price': bars.barId.pricePerHour*time+bars.barId.pricePerPerson*persons,
+  'price': step1(barId, time, persons),
   'commission': {
     'insurance': 0,
     'treasury': 0,
@@ -146,6 +146,17 @@ const actors = [{
   }]
 }];
 
+function step1(barId, time, persons) {
+    for(var i = 0; i < bars.length; i++) {
+        if(bars[i].id == barId)
+        {
+            return bars[i].pricePerHour*time+bars[i].pricePerPerson*persons;
+        }
+    }       // Function returns the product of a and b
+}
+
+
 console.log(bars);
 console.log(events);
 console.log(actors);
+console.log();
